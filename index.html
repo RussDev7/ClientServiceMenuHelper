@@ -539,12 +539,19 @@
         var solutionItems = [];
         
         // Setup the checkbox lists.
+        var cashFlowProcessed = false; // Flag to track if cashFlow case is processed.
         var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
         checkboxes.forEach(function(checkbox) {
+        
+            // Check to suppress further entres.
+            if (cashFlowProcessed) return; // If cashFlow case is processed, exit the loop.
+            
+            // Get the ID of the current checkbox.
             switch (checkbox.id) {
                 case "cashFlow":
                     showcaseItems.push("Cash Flow Slides");
                     solutionItems.push("Background Check");
+					cashFlowProcessed = true; // Set flag to true.
                     break;
                 case "assetProtection":
                     showcaseItems.push("Infinite Banking + 3in1 Solution + Infinite Bank");
