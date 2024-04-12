@@ -642,6 +642,7 @@
         showcaseTitle.setAttribute("x", "8%");
         showcaseTitle.setAttribute("font-size", fontSize); // Larger font size for title.
         showcaseTitle.setAttribute("text-anchor", "middle");
+		showcaseTitle.setAttribute("fill", "gray"); // Set fill color to light gray.
         svgContent.appendChild(showcaseTitle);
         
         startY += fontSize - 60; // Adjust position for title.
@@ -653,6 +654,7 @@
             textElement.setAttribute("x", "1%"); // Center text horizontally.
             textElement.setAttribute("font-size", fontSize - 5); // Set font size.
             textElement.setAttribute("text-anchor", "left"); // Center text horizontally.
+			textElement.setAttribute("fill", "gray"); // Set fill color to light gray
             svgContent.appendChild(textElement);
             startY += fontSize + 10; // Increment Y position for next item.
         });
